@@ -3,6 +3,10 @@ document.addEventListener("DOMContentLoaded", () => {
   const resetTitleButton = document.getElementById("resetTitleButton");
   const titleInput = document.getElementById("titleInput");
 
+  if (titleInput) {
+    titleInput.focus(); // Focus the input when the extension is opened
+  }
+
   if (changeTitleButton) {
     changeTitleButton.addEventListener("click", () => {
       const newTitle = titleInput.value;
